@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>PumpOS Dashboard</title></head>
+<body>
+<h1>PumpOS V1.3 - Today Summary</h1>
+<div>Today's Sales: <b>₹{{ today_sales|floatformat:0 }}</b></div>
+<div>Pumps: {{ pumps }} | Nozzles: {{ nozzles }}</div>
+<h3>Recent Sales</h3>
+<ul>{% for sale in recent_sales %}<li>{{ sale }}</li>{% endfor %}</ul>
+<nav>
+<a href="/pumps/">Pumps</a> | <a href="/pumps/nozzles/">Nozzles</a> | 
+<a href="/pumps/sales/">Sales</a> | <a href="/admin/">Admin</a>
+</nav>
+</body>
+</html>

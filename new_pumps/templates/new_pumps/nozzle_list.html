@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>PumpOS - Nozzles</title></head>
+<body>
+<h1>All Nozzles</h1>
+<ul>
+{% for nozzle in nozzles %}
+    <li>{{ nozzle }} - Status: {{ nozzle.status }}</li>
+{% empty %}
+    <li>No nozzles added.</li>
+{% endfor %}
+</ul>
+<a href="/pumps/">Pumps</a> | <a href="/admin/">Admin</a>
+</body>
+</html>

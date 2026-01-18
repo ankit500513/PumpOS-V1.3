@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>PumpOS - Daily Sales</title>
+  </head>
+  <body>
+    <h1>Recent Sales ({{ sales.count }})</h1>
+    <ul>
+      {% for sale in sales %}
+      <li>{{ sale }}</li>
+      {% empty %}
+      <li>No sales recorded.</li>
+      {% endfor %}
+    </ul>
+    <a href="/pumps/">Pumps</a> | <a href="/pumps/nozzles/">Nozzles</a> |
+    <a href="/admin/">Admin</a>
+  </body>
+</html>

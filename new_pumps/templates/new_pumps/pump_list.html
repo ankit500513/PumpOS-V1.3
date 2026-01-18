@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>PumpOS - Pumps</title>
+  </head>
+  <body>
+    <h1>All Pumps ({{ pumps.count }})</h1>
+    <ul>
+      {% for pump in pumps %}
+      <li>{{ pump.name }} - {{ pump.ownername }} ({{ pump.city }})</li>
+      {% empty %}
+      <li>No pumps added.</li>
+      {% endfor %}
+    </ul>
+    <a href="/admin/">Admin</a>
+  </body>
+</html>
